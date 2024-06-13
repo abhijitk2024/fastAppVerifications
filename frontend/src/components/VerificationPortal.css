@@ -1,0 +1,155 @@
+/* Styles specific to the Verification Portal */
+.page-container {
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #343a40;
+  color: white;
+  border-radius: 5px;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  background-color: #495057;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-links li {
+  margin: 0 15px;
+}
+
+#nav-links button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+#nav-links button:hover {
+  background-color: #495057;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #343a40;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links li {
+    margin: 10px 0;
+  }
+
+  #nav-links button {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 80vh;
+}
+
+.dashboard-frame {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  text-align: center;
+  flex: 1 1 calc(50% - 40px);
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.container .dashboard-frame h2 {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.container .dashboard-frame .content {
+  font-size: 1em;
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container .dashboard-frame {
+    flex: 1 1 100%;
+  }
+}
